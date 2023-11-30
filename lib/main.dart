@@ -8,14 +8,12 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
- // This widget is the root of your application.
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return const CupertinoApp(
       title: 'Spending Tracker',
-      theme: CupertinoThemeData(
-
-      ),
+      theme: CupertinoThemeData(),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -79,6 +77,9 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Text(
+                "Test 13 really long strings should trigger style to go on different line",
+                style: Theme.of(context).textTheme.headlineMedium),
           ],
         ),
       ),
